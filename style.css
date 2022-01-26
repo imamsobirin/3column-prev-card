@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+/*
+700    
+font-family: 'Big Shoulders Display', cursive;
+400 
+font-family: 'Lexend Deca', sans-serif;
+*/
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --paragraphs: hsla(0, 0%, 100%, 0.75);
+  --bg-head-btn: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+.container {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  color: var(--paragraphs);
+  border-radius: px;
+}
+
+.card-orange {
+  background-color: var(--bright-orange);
+  border-radius: 10px 0 0 10px;
+}
+.card-blue {
+  background-color: var(--dark-cyan);
+}
+.card-green {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0px 10px 10px 0;
+}
+
+.card {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 40px;
+}
+.icon img {
+  display: block;
+}
+.card__header {
+  font-family: "Big Shoulders Display", cursive;
+  color: var(--bg-head-btn);
+  font-size: 1.3rem;
+}
+.card__description {
+  padding-bottom: 20px;
+}
+
+.btn {
+  padding: 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--bg-head-btn);
+  border-radius: 40px;
+  width: 60%;
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+}
+.btn-orange {
+  color: var(--bright-orange);
+}
+.btn-blue {
+  color: var(--dark-cyan);
+}
+.btn-green {
+  color: var(--very-dark-cyan);
+}
+
+.btn:hover {
+  outline: 2px solid var(--bg-head-btn);
+  background-color: transparent;
+  color: var(--bg-head-btn);
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    width: 350px;
+  }
+  .card-orange {
+    border-radius: 10px 10px 0 0;
+  }
+  .card-green {
+    border-radius: 0 0 10px 10px;
+  }
+}
